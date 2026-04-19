@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic | Master Your Movement</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">KINETIC</div>
+        <div class="nav-links">
+            <a href="#" class="active">SESSIONS</a>
+            <a href="#">METRICS</a>
+            <a href="#">REPORTS</a>
+        </div>
+        <div class="nav-icons">
+            <i class="ph ph-bell"></i>
+            <i class="ph ph-gear"></i>
+            <div class="avatar"></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge"><div class="dot"></div> SYSTEM ONLINE</div>
+            <h1>MASTER<br>YOUR<br><span class="highlight">MOVEMENT</span></h1>
+            <p>Advanced telemetry and tactical programming for the functional athlete. Calibrate your performance.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" id="start-training">
+                    <i class="ph-fill ph-play"></i> START TRAINING
+                </button>
+                <button class="btn-secondary">CALIBRATE</button>
+            </div>
+        </div>
+        
+        <div class="hero-image-placeholder">
+            <div class="floating-metric">
+                <span class="metric-value">1.24s</span>
+                <span class="metric-label">TIME IN TENSION</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="bento-container">
+        
+        <div class="bento-card mobility-card">
+            <h3>MOBILITY METRICS</h3>
+            <div class="circular-progress">
+                <div class="inner-circle">
+                    <span class="score">82</span>
+                    <span class="label">SCORE</span>
+                </div>
+            </div>
+            <div class="metric-list">
+                <div class="metric-item"><span>Shoulder Flexion</span> <span class="highlight">155°</span></div>
+                <div class="metric-item"><span>Hip Extension</span> <span class="highlight">22°</span></div>
+            </div>
+        </div>
+
+        <div class="bento-card power-card">
+            <h3><i class="ph-fill ph-lightning"></i> EXPLOSIVE POWER OUTPUT</h3>
+            <div class="bar-chart">
+                <div class="bar" style="height: 30%;"></div>
+                <div class="bar" style="height: 45%;"></div>
+                <div class="bar" style="height: 60%;"></div>
+                <div class="bar active-bar" style="height: 95%;"></div>
+                <div class="bar" style="height: 50%;"></div>
+                <div class="bar" style="height: 70%;"></div>
+            </div>
+        </div>
+
+        <div class="bento-card static-holds-card">
+            <h3><i class="ph ph-stopwatch"></i> STATIC HOLDS</h3>
+            <div class="timer">00:<span class="highlight">45</span><span class="small-ms">.2</span></div>
+            <p class="timer-label">FRONT LEVER</p>
+            <button class="btn-primary w-full" id="log-hold"><i class="ph-fill ph-play"></i> LOG</button>
+        </div>
+
+        <div class="bento-card protocol-card span-2">
+            <div class="protocol-info">
+                <div class="icon-box"><i class="ph ph-barbell"></i></div>
+                <div>
+                    <span class="tag">CALISTHENICS • Today, 06:00 AM</span>
+                    <h4>HYPERTROPHY PROTOCOL ALPHA</h4>
+                </div>
+            </div>
+            <div class="protocol-stats">
+                <div class="stat"><span>65m</span> DURATION</div>
+                <div class="stat"><span>8.4t</span> VOLUME</div>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
