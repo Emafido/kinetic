@@ -19,7 +19,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    padding: 24px 5%; /* Fluid percentage padding */
+    padding: 24px 5%; 
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -37,8 +37,13 @@ body {
 .nav-links { display: flex; gap: 24px; }
 .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 14px; }
 .nav-links a.active { color: var(--neon-accent); border-bottom: 2px solid var(--neon-accent); padding-bottom: 4px; }
-.nav-icons { display: flex; gap: 16px; align-items: center; font-size: 20px; color: var(--neon-accent); }
-.avatar { width: 32px; height: 32px; border-radius: 50%; background: #333; }
+
+/* NEW CTAs */
+.nav-actions { display: flex; gap: 16px; align-items: center; }
+.btn-text { color: var(--text-muted); text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: 1px; transition: color 0.3s ease; }
+.btn-text:hover { color: var(--text-main); }
+.btn-primary-sm { background: var(--neon-accent); color: var(--bg-color); padding: 10px 20px; border-radius: 4px; font-weight: 800; font-size: 13px; border: none; cursor: pointer; transition: all 0.3s ease; }
+.btn-primary-sm:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(204, 255, 0, 0.3); }
 
 /* HERO SECTION */
 .hero {
@@ -50,36 +55,12 @@ body {
     min-height: 50vh;
 }
 
-.hero-content {
-    flex: 1; /* Takes up 50% on desktop */
-}
-
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.1);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
+.hero-content { flex: 1; }
+.badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; letter-spacing: 1px; }
 .dot { width: 6px; height: 6px; background: var(--neon-accent); border-radius: 50%; box-shadow: 0 0 8px var(--neon-accent); }
-
-.hero h1 {
-    font-size: clamp(48px, 6vw, 84px); /* Fluid typography: shrinks dynamically */
-    font-weight: 900;
-    line-height: 0.9;
-    letter-spacing: -2px;
-    margin: 24px 0;
-}
-
+.hero h1 { font-size: clamp(48px, 6vw, 84px); font-weight: 900; line-height: 0.9; letter-spacing: -2px; margin: 24px 0; }
 .highlight { color: var(--neon-accent); }
-
 .hero p { color: var(--text-muted); max-width: 400px; line-height: 1.6; margin-bottom: 32px; }
-
 .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
 
 button { cursor: pointer; border: none; padding: 16px 32px; font-weight: 800; font-size: 14px; transition: all 0.3s ease; }
@@ -92,7 +73,6 @@ button { cursor: pointer; border: none; padding: 16px 32px; font-weight: 800; fo
 .hero-image-placeholder {
     flex: 1;
     width: 100%;
-    /* Replace this URL with your actual image path when ready */
     background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); 
     background-size: cover;
     background-position: center;
@@ -100,37 +80,13 @@ button { cursor: pointer; border: none; padding: 16px 32px; font-weight: 800; fo
     position: relative;
     min-height: 500px;
 }
-
-.floating-metric {
-    position: absolute;
-    bottom: 24px;
-    right: 24px;
-    text-align: right;
-    background: rgba(11, 13, 14, 0.8);
-    padding: 12px;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-}
+.floating-metric { position: absolute; bottom: 24px; right: 24px; text-align: right; background: rgba(11, 13, 14, 0.8); padding: 12px; border-radius: 8px; backdrop-filter: blur(10px); }
 .metric-value { display: block; color: var(--neon-accent); font-size: 32px; font-weight: 900; }
 .metric-label { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--text-main); }
 
 /* BENTO GRID */
-.bento-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 16px;
-    margin-top: 48px;
-}
-
-.bento-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 24px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
+.bento-container { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 16px; margin-top: 48px; }
+.bento-card { background: var(--card-bg); border-radius: 12px; padding: 24px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column; }
 .bento-card:hover { transform: translateY(-4px); border-color: rgba(204, 255, 0, 0.2); }
 .bento-card h3 { font-size: 12px; font-weight: 800; letter-spacing: 1px; color: var(--text-main); display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
 .span-2 { grid-column: span 2; }
@@ -160,53 +116,20 @@ button { cursor: pointer; border: none; padding: 16px 32px; font-weight: 800; fo
 .stat { font-size: 12px; color: var(--text-muted); display: flex; flex-direction: column; }
 .stat span { font-size: 24px; font-weight: 800; color: var(--text-main); }
 
-
-/* =========================================================
-   MEDIA QUERIES (The Fix for Responsiveness)
-   ========================================================= */
-
-/* Tablet View */
+/* MEDIA QUERIES */
 @media (max-width: 1024px) {
-    .bento-container {
-        grid-template-columns: 1fr 1fr; /* Drops from 3 columns to 2 */
-    }
-    .span-2 {
-        grid-column: span 2;
-    }
+    .bento-container { grid-template-columns: 1fr 1fr; }
+    .span-2 { grid-column: span 2; }
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
     body { padding: 16px; }
-    
-    .hero {
-        flex-direction: column; /* Stacks image under text */
-        margin-top: 32px;
-        text-align: center;
-        gap: 32px;
-    }
-    
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
+    .hero { flex-direction: column; margin-top: 32px; text-align: center; gap: 32px; }
+    .hero-content { display: flex; flex-direction: column; align-items: center; }
     .hero p { margin: 16px auto 32px auto; }
     .hero-buttons { justify-content: center; }
-    
-    .hero-image-placeholder {
-        width: 100%;
-        min-height: 350px;
-    }
-    
-    .nav-links { display: none; } /* Hides mid links to save space */
-    
-    .bento-container {
-        grid-template-columns: 1fr; /* Drops from 2 columns to 1 */
-    }
-    
-    .span-2 {
-        grid-column: span 1; /* Stops the protocol card from breaking out of the 1-column grid */
-    }
+    .hero-image-placeholder { width: 100%; min-height: 350px; }
+    .nav-links { display: none; }
+    .bento-container { grid-template-columns: 1fr; }
+    .span-2 { grid-column: span 1; }
 }
